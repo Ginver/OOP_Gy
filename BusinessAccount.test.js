@@ -2,7 +2,7 @@ const BusinessAccount = require("./BusinessAccount.js");
 
 // Starting with only this test, take out .only once it is working
 // Add .only to the next test to do one at a time
-test.only("BusinessAccount.js should export something", () => {
+test("BusinessAccount.js should export something", () => {
   expect(BusinessAccount).not.toBeNull();
 });
 
@@ -144,7 +144,7 @@ test("Amounts passed to sepaInvoice should be ignored if the business does not h
   expect(businessAccountInstance.balance).toBe(1000);
 });
 
-test("Negative amounts passed to sepaInvoice should be ignored", () => {
+test.only("Negative amounts passed to sepaInvoice should be ignored", () => {
   const balance = 1000;
   const creditLimit = 500;
   const sepaPermission = true;
